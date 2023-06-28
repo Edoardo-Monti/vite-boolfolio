@@ -1,6 +1,7 @@
 <script >
 import {store} from './store'
 import MainComp from './components/MainComp.vue';
+import axios from 'axios';
 
 export default{
   name: 'App',
@@ -9,7 +10,20 @@ export default{
   },
   data(){
     return{
-      store
+      store,
+      posts:[],
+    }
+  },
+  mounted(){
+    this.getPosts();
+  },
+  methods:{
+    getPosts(){
+      axios.get('http://127.0.0.1:8000/api/posts').then(res => {
+        
+        this.posts = res.data.posts
+        console.log(this.posts)
+      })
     }
   }
 }
@@ -29,5 +43,8 @@ export default{
 .animate__animated.animate__rubberBand{
 
     animation-delay: 2s;
+}
+h1{
+  color: red;
 }
 </style>
