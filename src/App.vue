@@ -11,7 +11,6 @@ export default{
   data(){
     return{
       store,
-      posts:[],
     }
   },
   mounted(){
@@ -21,8 +20,8 @@ export default{
     getPosts(){
       axios.get('http://127.0.0.1:8000/api/posts').then(res => {
         
-        this.posts = res.data.posts
-        console.log(this.posts)
+        store.posts = res.data.posts
+        console.log(store.posts)
       })
     }
   }
@@ -33,7 +32,6 @@ export default{
 <template>
   <div>
     <h1 class="animate__animated animate__rubberBand">ciao</h1>
-    
     <MainComp/>
   </div>
 </template>
