@@ -21,7 +21,7 @@ export default{
       axios.get('http://127.0.0.1:8000/api/posts').then(res => {
         
         store.posts = res.data.posts
-        console.log(store.posts)
+        // console.log(store.posts)
       })
     }
   }
