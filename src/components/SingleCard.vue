@@ -21,7 +21,9 @@ export default{
                 <h6>TECHNOLOGIES</h6>
                 <span v-for="(elem,index) in propsCard.technologies">{{ elem.name }}</span>
             </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <router-link :to="{name: 'SinglePost'}" class="btn btn-primary">
+                Visita Pagina Dedicata
+            </router-link>
         </div>
     </div>
 </template>

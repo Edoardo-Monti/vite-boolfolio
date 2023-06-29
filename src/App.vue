@@ -1,39 +1,20 @@
 <script >
 import {store} from './store'
-import MainComp from './components/MainComp.vue';
-import axios from 'axios';
+import AppHeader from './components/AppHeader.vue'
 
 export default{
   name: 'App',
   components: {
-    MainComp,
+    AppHeader,
   },
-  data(){
-    return{
-      store,
-    }
-  },
-  mounted(){
-    this.getPosts();
-  },
-  methods:{
-    getPosts(){
-      axios.get('http://127.0.0.1:8000/api/posts').then(res => {
-        
-        store.posts = res.data.posts
-        // console.log(store.posts)
-      })
-    }
-  }
+  
 }
 
 </script>
 
 <template>
-  <div>
-    <h1 class="animate__animated animate__rubberBand">ciao</h1>
-    <MainComp/>
-  </div>
+    <AppHeader/>
+    <router-view/>
 </template>
 
 <style lang="scss">
