@@ -1,7 +1,7 @@
 import {createRouter,createWebHistory} from 'vue-router';
 import AppHome from './pages/AppHome.vue';
 import PostList from './pages/PostList.vue';
-import PostList from './pages/SinglePost.vue';
+import SinglePost from './pages/SinglePost.vue';
 const router = createRouter({
     history: createWebHistory(),
     routes: [{

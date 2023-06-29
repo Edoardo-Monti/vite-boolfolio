@@ -1,7 +1,13 @@
 <script>
+
+
+
 export default{
-    name:"SinglePost",
+  name: 'SinglePost',
+  components: {
     
+  },
+  
 }
 
 </script>
